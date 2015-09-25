@@ -96,6 +96,7 @@
                 url: "http://greeen.brightron.net/greeen_project/index.php/ajax/phone_dropped",
                 data: {phone_number: $("#phone_number").val()}
             });
+            $("#phone_number").val("");
             var options = { speed: 1000, easing: 'easeOutCubic', updateURL: false };
             smoothScroll.animateScroll(null, '#thankyou', options);
 
