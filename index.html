@@ -91,7 +91,11 @@
                 url: "http://192.168.1.3:1880/reset"
             });
             $('#loading').hide();
-            $('#user-data').submit();
+            $.ajax({
+                method: "POST",
+                url: "http://greeen.brightron.net/greeen_project/index.php/ajax/phone_dropped",
+                data: {phone_number: $("#phone_number").val()}
+            });
             var options = { speed: 1000, easing: 'easeOutCubic', updateURL: false };
             smoothScroll.animateScroll(null, '#thankyou', options);
 
