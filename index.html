@@ -25,7 +25,7 @@
         <div class="col-lg-12">
             <div class="row">
                 <div class="col-lg-12">
-                    <center><img src="images/Sc2.png" alt=""/></center>
+                    <center><img id="sc2" src="images/Sc2.png" alt=""/></center>
                 </div>
             </div>
             <div class="row">
@@ -68,6 +68,10 @@
         $('#want-to-recycle').click(function () {
             temp_bool = true;
         });
+
+        $('#sc2').click(function(){
+            dropped();
+        })
 
         var check = function () {
             $.ajax({
